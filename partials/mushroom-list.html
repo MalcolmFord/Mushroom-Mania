@@ -1,0 +1,8 @@
+<input type="text" ng-model="SearchText" id="searchText">
+<input type="radio" ng-model="good" value="true" id="Poisonous">Poisonous
+<input type="radio" ng-model="good" value="false" id="Non-poisonous">Non-poisonous
+
+<div ng-repeat="item in shrooms | filter: SearchText | filter: good">
+    <p>{{$item.name}}</p>
+    <p>{{item.description}}</p>
+</div>
